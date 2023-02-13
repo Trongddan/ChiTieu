@@ -1,0 +1,55 @@
+.bill-wrapper {
+  box-sizing: border-box;
+  font-family: Arial;
+  padding: 20px;
+  .form-bill {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    .input-group {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      label {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+        width: 150px;
+      }
+      .inputvalue {
+        margin: 0 12px;
+        height: 35px;
+        width: 300px;
+        padding: 0 12px;
+        outline: none;
+        border-radius: 6.4px;
+        border: 1px solid rgb(134, 133, 133);
+      }
+      .inputvalue:focus {
+        border: 2px solid pink;
+      }
+      input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        margin: 0 12px;
+      }
+    }
+    .button-add-bill {
+      position: absolute;
+      margin-top: 20px;
+      width: 90px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 6.4px;
+      background: green;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover{
+          background: rgb(51, 175, 51);
+      }
+    }
+  }
+}

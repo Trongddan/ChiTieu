@@ -9,19 +9,27 @@
     justify-content: center;
     height: 90px;
     background:rgb(253, 153, 170);
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    overflow: hidden;
   }
   .sideBar-content{
     min-height: calc(100vh - 90px);
     background: black;
   .list-theme{
     padding: 12px 3px;
+    list-style: none;
     .theme-item{
       cursor: pointer;
-      background: rgb(222, 222, 224);
+      background: rgb(255, 255, 255);
       margin: 5px 0;
       padding: 15px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 6.4px;
       &:hover{
-       opacity: 0.8;
+        transform: translate3d(5px, -10px,-29px);
+        box-shadow: 2px -3px 5px gray ;
       }
     }
     .active{

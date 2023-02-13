@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sideBar.scss";
-import { AiOutlineLineChart } from "react-icons/ai";
+import { AiOutlineLineChart,AiOutlineSetting } from "react-icons/ai";
 import { RiBillLine } from "react-icons/ri";
 import { GiFruitBowl } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
@@ -29,6 +29,12 @@ const SideBar = () => {
       path: "/home/menu",
       id: 2,
       label:<GiFruitBowl/>
+    },
+    {
+      name: "Cài đặt",
+      path: "/home/setting",
+      id: 3,
+      label:<AiOutlineSetting/>
     },
   ];
   return (
