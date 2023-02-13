@@ -1,0 +1,16 @@
+.homePage-wrapper{
+  display: flex;
+  .main-content{
+    min-height: 100vh;
+    width: 100%;
+    .navigation{
+      height: 90px;
+      background: rgb(223, 221, 221);
+      display: flex;
+      align-items: center;
+    }
+    .home-content-wrapper{
+        
+    }
+  }
+}
