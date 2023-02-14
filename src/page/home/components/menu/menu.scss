@@ -1,0 +1,20 @@
+.menu-wrapper {
+  padding: 20px;
+  overflow-y: scroll;
+  height: calc(100vh - 90px);
+  background: rgb(58, 58, 58);
+  overflow-x: hidden;
+  .button-operator{
+      margin: 5px 0;
+      button{
+          margin-right: 12px;
+      }
+  }
+}
+.menu-wrapper::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255) !important;
+  width: 2px !important;
+}
+.menu-wrapper::-webkit-scrollbar-thumb {
+  background: rgb(252, 176, 176);
+}

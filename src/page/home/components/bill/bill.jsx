@@ -8,7 +8,7 @@ const Bill = () => {
         <div className="form-bill-container">
           <div className="input-group">
             <input type="checkbox" name="" id="" />
-            <label htmlFor="">Tiền điện :</label>
+            <label htmlFor="">Tiền điện :</label><br/>
             <input
               className="inputvalue"
               type="number"
