@@ -1,0 +1,26 @@
+.chart-container {
+  display: flex;
+  padding: 20px;
+  gap: 1.5%;
+  .chart-name{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .chart-content-left {
+    flex: 2;
+    padding: 12px;
+    height: 500px;
+    width: 100%;
+    background: rgb(228, 195, 195);
+    border-radius: 6.4px;
+  }
+  .chart-content-right {
+    flex: 3;
+    padding: 12px;
+    height: 500px;
+    background: #574f4f;
+    border-radius: 6.4px;
+  }
+  
+}

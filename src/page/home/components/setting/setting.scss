@@ -1,0 +1,50 @@
+.setting-wrapper{
+  background-color: rgb(53, 53, 53);;
+  min-height: calc(100vh - 90px);
+  box-sizing: border-box;
+  padding: 20px;
+  .title-setting{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .list-setting{
+    list-style: none;
+    .list-setting-item{
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 18px;
+      text-transform: capitalize;
+      padding: 12px;
+        input[type="radio"]{
+          position: relative;
+          appearance: none;
+          width: 40px;
+          height: 20px;
+          border-radius: 20px;
+          background: #ccc;
+          box-shadow: 0px 0px 5px rgba(0,0,0,0.2); margin-right: 12px;
+           
+        }
+        input:checked[type="radio"]{
+          background: rgb(43, 255, 0);
+        }
+        input[type="radio"]::after{
+          content: "";
+          width: 20px;
+          background: #fff;
+          height: 20px;
+          position: absolute;
+          border-radius: 50%;
+          left: 0;
+          scale:1.0043;
+          transition: all 0.1s linear;
+        }
+        input:checked[type="radio"]::after{
+          left: 50%;
+        }
+    }
+  }
+}

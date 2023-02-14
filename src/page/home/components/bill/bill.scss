@@ -2,54 +2,122 @@
   box-sizing: border-box;
   font-family: Arial;
   padding: 20px;
+  display: flex;
   .form-bill {
+    flex: 2;
     position: relative;
-    width: 600px;
     max-width: 90%;
-    .input-group {
-      height: 50px;
-      display: flex;
-      align-items: center;
+    .bill-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgb(252, 176, 176);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .form-bill-container {
+      min-height: 220px;
+      position: relative;
+      .input-group {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        label {
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: capitalize;
+          width: 150px;
+        }
+        .inputvalue {
+          margin: 0 12px;
+          height: 35px;
+          width: 300px;
+          padding: 0 12px;
+          outline: none;
+          border-radius: 6.4px !important;
+          border: 1px solid rgb(134, 133, 133);
+        }
+        .inputvalue:focus {
+          border: 2px solid pink;
+        }
+        input[type="checkbox"] {
+          height: 20px;
+          width: 20px;
+          margin: 0 12px;
+        }
+        input:not(:checked)[type="checkbox"] ~ input {
+          opacity: 0.2;
+          pointer-events: none;
+        }
+      }
+      .button-add-bill {
+        position: absolute;
+        margin-top: 20px;
+        bottom: 0;
+        width: 90px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 6.4px;
+        background: green;
+        left: 50%;
+        transform: translateX(-50%);
+        &:hover {
+          background: rgb(51, 175, 51);
+        }
+      }
+    }
+    .type-money {
+      height: 160px;
+      padding: 20px;
       label {
         font-size: 18px;
         font-weight: 500;
         text-transform: capitalize;
-        width: 150px;
+        width: 160px;
       }
-      .inputvalue {
+      input {
         margin: 0 12px;
         height: 35px;
         width: 300px;
         padding: 0 12px;
         outline: none;
-        border-radius: 6.4px;
+        border-radius: 6.4px !important;
         border: 1px solid rgb(134, 133, 133);
       }
-      .inputvalue:focus {
-        border: 2px solid pink;
-      }
-      input[type="checkbox"] {
-        height: 20px;
-        width: 20px;
-        margin: 0 12px;
+    }
+  }
+  .list-history-bill {
+    flex: 3;
+    .table-scroll {
+      border-radius: 6.4px;
+      position: relative;
+      max-height: calc(100vh - 200px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      table {
+        thead {
+          top: 0px;
+          position: sticky;
+          background: rgb(252, 176, 176);
+          height: 40px;
+          padding: 12px;
+          th {
+            line-height: 40px;
+          }
+        }
       }
     }
-    .button-add-bill {
-      position: absolute;
-      margin-top: 20px;
-      width: 90px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
+    ::-webkit-scrollbar-thumb {
+      background: rgb(65, 63, 63);
       border-radius: 6.4px;
-      background: green;
-      left: 50%;
-      transform: translateX(-50%);
-      &:hover{
-          background: rgb(51, 175, 51);
-      }
+    }
+    ::-webkit-scrollbar-track {
+      background: rgb(212, 212, 212);
+    }
+    ::-webkit-scrollbar-track {
+      border-radius: 6.4px;
     }
   }
 }
