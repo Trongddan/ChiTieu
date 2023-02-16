@@ -5,10 +5,11 @@ import Chart from '../page/home/components/chart/chart'
 import Menu from '../page/home/components/menu/menu'
 import Setting from '../page/home/components/setting/setting'
 import Home from '../page/home/Home'
+import Login from '../page/login/login'
 const AppRouter = () => {
   return (
     <Routes>
-      <Route exact path='/' element={<Home/>}></Route>
+      <Route exact path='/' element={<Login/>}></Route>
       <Route exact path='/home' element={<Home/>}>
           <Route exact path='chart' element={<Chart/>}/>
           <Route exact path='bill' element={<Bill/>}/>

@@ -94,7 +94,6 @@
       border-radius: 6.4px;
       position: relative;
       max-height: calc(100vh - 200px);
-      overflow-y: scroll;
       overflow-x: hidden;
       table {
         thead {
@@ -109,16 +108,17 @@
         }
       }
     }
-    ::-webkit-scrollbar-thumb {
-      background: rgb(65, 63, 63);
-      border-radius: 6.4px;
-    }
-    ::-webkit-scrollbar-track {
-      background: rgb(212, 212, 212);
-    }
-    ::-webkit-scrollbar-track {
-      border-radius: 6.4px;
-    }
+    // ::-webkit-scrollbar-thumb {
+    //   background: rgb(65, 63, 63);
+    //   border-radius: 6.4px;
+    // }
+    // ::-webkit-scrollbar-track {
+    //   background: rgb(212, 212, 212);
+    // }
+    // ::-webkit-scrollbar-track {
+    //   border-radius: 6.4px;
+    // }
+    
   }
 }
 //smart

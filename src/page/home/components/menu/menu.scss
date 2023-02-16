@@ -1,7 +1,7 @@
 .menu-wrapper {
   padding: 20px;
   overflow-y: scroll;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 40px);
   background: rgb(58, 58, 58);
   overflow-x: hidden;
   .button-operator{
@@ -10,11 +10,24 @@
           margin-right: 12px;
       }
   }
+  .form{
+    .image-avt{
+      object-fit: cover;
+      margin-top: 15px;
+      height: 200px;
+      width: 150px;
+      border-radius: 6.4px;
+    }
+  }
 }
-.menu-wrapper::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255) !important;
-  width: 2px !important;
+.menu-wrapper::-webkit-scrollbar {
+  width: 0.5em;
 }
-.menu-wrapper::-webkit-scrollbar-thumb {
-  background: rgb(252, 176, 176);
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
 }
