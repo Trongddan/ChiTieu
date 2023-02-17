@@ -5,7 +5,8 @@ import "./App.css";
 import Noel from "./component/noel/noel";
 import AppRouter from "./config/appRouter";
 import { getThemePage } from "./utils/storage";
-
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const theme = getThemePage();
   const {themePage}= useSelector((state) => state.appSlice);
@@ -24,6 +25,7 @@ function App() {
       <Router>
         <AppRouter />
       </Router>
+      <ToastContainer/>
     </>
   );
 }
