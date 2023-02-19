@@ -4,7 +4,10 @@ import "./avatarpop.scss";
 import { getUser, setCoinLocal } from "../../utils/storage";
 import { addCoin } from "../../services/userService";
 import { toast } from "react-toastify";
+import { setUserCoin } from "../../redux/appSlice";
+import { useDispatch } from "react-redux";
 const AvatarPop = () => {
+  const dispatch = useDispatch();
   const username = getUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [coin, setCoin] = useState();
@@ -20,7 +23,7 @@ const AvatarPop = () => {
       params,
       (res) => {
         toast(res.data.mess, { type: "success" });
-        setCoinLocal(coin);
+        dispatch(setUserCoin())
       },
       (err) => {
         console.log(err);

@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const theme = getThemePage();
   const {themePage}= useSelector((state) => state.appSlice);
-  console.log(themePage);
   const noelTheme = useMemo(()=>{
     switch(theme){
       case "noel":

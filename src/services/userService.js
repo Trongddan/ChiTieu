@@ -1,4 +1,4 @@
-import { postRequest, putRequest } from "../api/apiCaller";
+import { getRequest, postRequest, putRequest } from "../api/apiCaller";
 
 import { apiPath } from "../config/apiPath";
 import { getId } from "../utils/storage";
@@ -11,4 +11,7 @@ export const loginUser = (params, successCallback, errorCallBack) => {
 };
 export const addCoin = (params, successCallback, errorCallBack) => {
   putRequest(apiPath.addCoin+"/"+user_id, params, successCallback, errorCallBack);
+};
+export const getUser = (params, successCallback, errorCallBack) => {
+  getRequest(apiPath.getUserById+"/"+user_id, params, successCallback, errorCallBack);
 };

@@ -5,31 +5,14 @@ import SideBar from "../../component/sideBar/sideBar";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { RiCoinsLine } from "react-icons/ri";
 import "./home.scss";
-import { getCoin } from "../../utils/storage";
+import Navigate from "./components/navigation/navigate";
 const Home = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const coin = getCoin();
-  // useEffect(() => {
-  //   if(location.pathname==="/"){
-  //     navigate("/home/chart");
-  //   }
 
-  // }, []);
   return (
     <div className="homePage-wrapper">
       <SideBar />
       <div className="main-content">
-        <div className="navigation">
-          <div className="hideSideBarIcon">
-            <MdOutlineArrowBackIos />
-          </div>
-          <span className="total-coin-title">Tổng tiền còn lại: </span>
-          <strong>{coin} đ</strong>
-          <RiCoinsLine size={20} color="#FFD700" />
-
-          <AvatarPop />
-        </div>
+<Navigate/>
         <div className="home-content-wrapper">
           <Outlet />
         </div>

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   themePage: false,
+  isAddcoin: true,
 };
 const appReducer = createSlice({
   name: "appReducer",
@@ -9,7 +10,10 @@ const appReducer = createSlice({
     setThemePageFlag: (state, actions) => {
       state.themePage = !state.themePage;
     },
+    setUserCoin: (state, actions) => {
+      state.isAddcoin = !state.isAddcoin;
+    }
   },
 });
-export const { setThemePageFlag } = appReducer.actions;
+export const { setThemePageFlag, setUserCoin } = appReducer.actions;
 export default appReducer.reducer;

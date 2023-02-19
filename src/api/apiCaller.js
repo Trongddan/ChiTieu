@@ -1,6 +1,7 @@
 import axios from "axios";
+import { getAccessToken } from "../utils/storage";
 axios.interceptors.request.use((config) => {
-  const token = "";
+  const token = getAccessToken();
   if (token) {
     config.headers.Authorization = `Bearr ${token}`;
   }

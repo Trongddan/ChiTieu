@@ -78,7 +78,7 @@ const Login = () => {
       param,
       async (res) => {
         await toast(res.data.mess, { type: "success" });
-        setUserInfo(res.data._doc);
+        setUserInfo(res.data);
         navigate("/home/chart");
       },
       (err) => {
