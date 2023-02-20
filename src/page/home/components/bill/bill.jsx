@@ -5,9 +5,10 @@ const Bill = () => {
     <div className="bill-wrapper">
       <div className="form-bill">
         <div className="bill-title">Thêm mới đơn</div>
-        <div className="form-bill-container">
+        <div className="form-bill-container ">
           <div className="input-group">
             <input type="checkbox" name="" id="" />
+            <div className="inputblock">
             <label htmlFor="">Tiền điện :</label><br/>
             <input
               className="inputvalue"
@@ -17,34 +18,10 @@ const Bill = () => {
               id=""
               placeholder="Nhập giá trị"
             />
-            <span>vnđ</span>
+            </div>
           </div>
-          <div className="input-group">
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Tiền nhà :</label>
-            <input
-              className="inputvalue"
-              type="number"
-              min={0}
-              name=""
-              id=""
-              placeholder="Nhập giá trị"
-            />
-            <span>vnđ</span>
-          </div>
-          <div className="input-group">
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Tiền Thực phẩm :</label>
-            <input
-              className="inputvalue"
-              type="number"
-              min={0}
-              name=""
-              id=""
-              placeholder="Nhập giá trị"
-            />
-            <span>vnđ</span>
-          </div>
+
+    
           <div className="button-add-bill">Thêm mới</div>
         </div>
         {/* <div className="type-money">

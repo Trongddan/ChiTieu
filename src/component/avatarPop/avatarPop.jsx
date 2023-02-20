@@ -10,9 +10,13 @@ const AvatarPop = () => {
   const dispatch = useDispatch();
   const username = getUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isfeeModal, setIsfeeModal] = useState(false);
   const [coin, setCoin] = useState();
   const showModal = () => {
     setIsModalOpen(true);
+  };
+  const showFeeModal = () => {
+    setIsfeeModal(true);
   };
   const handleOk = () => {
     setIsModalOpen(false);
@@ -23,7 +27,7 @@ const AvatarPop = () => {
       params,
       (res) => {
         toast(res.data.mess, { type: "success" });
-        dispatch(setUserCoin())
+        dispatch(setUserCoin());
       },
       (err) => {
         console.log(err);
@@ -31,8 +35,14 @@ const AvatarPop = () => {
       }
     );
   };
+  const handleAddFee=()=>{
+
+  }
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+  const handleCanceladdFee = () => {
+    setIsfeeModal(false);
   };
   const items = [
     {
@@ -44,6 +54,13 @@ const AvatarPop = () => {
       label: <span>Ngân sách chi tiêu</span>,
       onClick: () => {
         showModal();
+      },
+    },
+    {
+      key: "3",
+      label: <span>Thêm loại tiền</span>,
+      onClick: () => {
+        showFeeModal();
       },
     },
     {
@@ -75,6 +92,30 @@ const AvatarPop = () => {
               onChange={(e) => setCoin(e.target.value)}
               id="name-food"
               type="number"
+              className="form-control"
+            />
+          </div>
+        </div>
+      </Modal>
+      <Modal
+        getContainer={() => document.getElementById("menu-wrapper")}
+        title="Thêm loại tiền"
+        cancelText="Hủy"
+        okText="Thêm "
+        open={isfeeModal}
+        onOk={handleAddFee}
+        onCancel={handleCanceladdFee}
+      >
+        <div className="form">
+          <div className="form-group">
+            <label htmlFor="name-food" className="form-label">
+              Loại tiền
+            </label>
+            <input
+              value={coin}
+              onChange={(e) => setCoin(e.target.value)}
+              id="name-food"
+              type="text"
               className="form-control"
             />
           </div>
